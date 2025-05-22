@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="home_styling.css">
+    <link rel="stylesheet" href="payment_styling.css">
+    <title> CheckOut | HomeUni</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <a href="startup.html">
+                    <img src="logo.png" style="width: 50px;">
+                </a>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="socialmedia.html">Social Media</a></li>
+                        <li><a href="cybersecurity.html">Cyber Security</a></li>
+                        <li><a href="artificialintelligence.html">Artificial Intelligence</a></li>
+                        <li><a href="maths.html">Mathematics</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                            class="glyphicon glyphicon-user"></span> Welcome, you!</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"> Profile</a></li>
+                        <li><a href="#"> Help</a></li>
+                        <li><a href="startup.html">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 60px;">
+
+        <form action="success.html" onsubmit="return validateEmail();">
+
+            <div class="row">
+
+                <div class="col">
+                    <h3 class="title">
+                        Billing Address
+                    </h3>
+
+                    <div class="inputBox">
+                        <label for="name">
+                            Full Name:
+                        </label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="email">
+                            Email:
+                        </label>
+                        <input type="email" id="email" placeholder="Enter email address" required>
+                        <span id="emailError" class="error"></span> <!-- Error message placeholder -->
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="address">
+                            Address:
+                        </label>
+                        <input type="text" id="address" placeholder="Enter address" required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="city">
+                            City:
+                        </label>
+                        <input type="text" id="city" placeholder="Enter city" required>
+                    </div>
+
+                    <div class="flex">
+
+                        <div class="inputBox">
+                            <label for="state">
+                                State:
+                            </label>
+                            <input type="text" id="state" placeholder="Enter state" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="zip">
+                                Zip Code:
+                            </label>
+                            <input type="number" id="zip" placeholder="123 456" required>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col">
+                    <h3 class="title">Payment</h3>
+
+                    <div class="inputBox">
+                        <label for="name">
+                            Card Accepted:
+                        </label>
+                        <img src="cards.png" style="width: 300px; height: 50px;">
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="cardName">
+                            Name On Card:
+                        </label>
+                        <input type="text" id="cardName" placeholder="Enter card name" required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="cardNum">
+                            Credit Card Number:
+                        </label>
+                        <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="16" required>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="">Exp Month:</label>
+                        <select name="" id="">
+                            <option value="">Choose month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="">Exp Year:</label>
+                            <select name="" id="">
+                                <option value="">Choose Year</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                            </select>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="cvv">CVV</label>
+                            <input type="number" id="cvv" placeholder="1234" required>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <input type="submit" value="Proceed to Checkout" class="submit_btn">
+        </form>
+
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+            emailError.textContent = ""; // Clear previous error message
+
+            if (email.trim() === "") {
+                emailError.textContent = "Email is required";
+                emailError.style.color = "red";
+                return false;
+            } else if (!isValidEmail(email.trim())) {
+                emailError.textContent = "Invalid email format";
+                emailError.style.color = "red";
+                return false;
+            }
+
+            return true;
+        }
+
+        function isValidEmail(email) {
+            // Very basic email validation
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+</body>
+
+</html>

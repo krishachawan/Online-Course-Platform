@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Courses | HomeUni</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="home_styling.css">
+    <link rel="stylesheet" href="shopping_cart_styling.css">
+    <style>
+        button {
+            background-color: #711DB0;
+            color: #f6f6f6;
+            border-radius: 15px;
+        }
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: rgb(252, 249, 249);
+            /* Set a background color */
+            color: black;
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+        }
+        .col-md-4:hover {
+            transform: scale(1.05);
+            /* Enlarge on hover */
+        }
+    </style>
+</head>
+
+<body class="showCart">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <a href="startup.html">
+                    <img src="logo.png" style="width: 50px;">
+                </a>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="background-color: #e7d6f3;">
+                        <li><a href="programming.html" style="height:40px; padding-top: 10px;">Programming</a></li>
+                        <li><a href="socialmedia.html" style="height:40px; padding-top: 10px;">Social Media</a></li>
+                        <li><a href="cybersecurity.html" style="height:40px; padding-top: 10px;">Cyber Security</a></li>
+                        <li><a href="artificialintelligence.html" style="height:40px; padding-top: 10px;">Artificial Intelligence</a></li>
+                        <li><a href="maths.html" style="height:40px; padding-top: 10px;">Mathematics</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><button onclick="toggleCart()"
+                        style="margin-top: 15px;background-color:transparent; border:none; color:white;"><span
+                            class="glyphicon glyphicon-shopping-cart" id="cart"></span><span></span> Cart</button></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span
+                            class="glyphicon glyphicon-user"></span> Welcome, you!</a>
+                    <ul class="dropdown-menu" style="background-color: #e7d6f3;">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="startup.html">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="up-arrow">&#9650;</span></button>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <div class="jumbotron" style="background-color: #711DB0; color: #ffffff; height: 600px; margin-top: 100px;">
+            <h1
+                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-top: 150px; padding-left: 30px;">
+                Cyber Security Courses</h1>
+            <p style="float:inline-start; padding-left: 30px">Embark on a journey into the dynamic realm of
+                cybersecurity with our Cybersecurity Course. In an era where digital landscapes are constantly evolving,
+                this course equips you with the essential knowledge and skills to safeguard systems, networks, and data
+                from evolving cyber threats.</p>
+            <img src="home.png" style="width: 220px; height: 220px;float: inline-end; margin-top: 0px;">
+            <br><br><br><br>
+            <a href="signup.html"><button
+                    style="height: 30px; width: 90px;margin-left: 30px; border-radius: 4px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #FFA732; color: #080808; border: none;">Enroll
+                    Now</button></a>
+        </div>
+        <!-- Courses Section -->
+        <div class="container" style="width: 1150px; margin-left: 35px;" id="listProduct">
+            <h2 style="color: #f8f7f9; font-weight:bolder;">Available Courses</h2>
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="incident.png" alt="Cyber Security Course 1">
+                        <div class="caption">
+                            <h3>Incident Response and Management</h3>
+                            <p>Understanding the importance of incident response in cybersecurity and developing an
+                                effective incident response plan.</p>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$50</h4>
+                            <br>
+                            <p><a href="Incident response and management.html" class="btn btn-primary" role="button"
+                                    style="margin-top:15px;float:inline-start; background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 5px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Incident Response and Management', '$50', 'incident.png')">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="dev.png" alt="Cyber Security Course 2">
+                        <div class="caption">
+                            <h3>Secure Software Development</h3>
+                            <p>The significance of incorporating security measures in the software development life
+                                cycle as well as best practices for writing secure code and avoiding common
+                                vulnerabilities.</p>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$55</h4>
+                            <br>
+                            <p><a href="secure software development.html" class="btn btn-primary" role="button"
+                                    style="margin-top:20px;float:inline-start; background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 10px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Secure Software Development', '$55', 'dev.png')">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 3-->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="penetration.png" alt="Cyber Security Course 3">
+                        <div class="caption">
+                            <h3>Penetration Testing</h3>
+                            <p>To prevent any malicious activity or exploitation, Penetration testing is important to
+                                understand how to exploit servers, networks etc.</p>
+                            <br>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$70</h4>
+                            <br>
+                            <p><a href="description.html" class="btn btn-primary" role="button"
+                                    style="margin-top:20px;float:inline-start; background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 10px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Penetration Testing', '$70', 'penetration.png')">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Course 4-->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="fundamental.png" alt="Cyber Security Course 4">
+                        <div class="caption">
+                            <h3>Basics Of Cyber Security</h3>
+                            <p>This will give you a complete understanding of different types of cyber attacks and
+                                defensive ways to tackle them.</p>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$90</h4>
+                            <br>
+                            <p><a href="basics of cybersecurity.html" class="btn btn-primary" role="button"
+                                    style="margin-top:40px;float:inline-start; background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 30px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Basics of Cyber Security', '$90', 'fundamental.png')">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 5-->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="vulnerability.png" alt="Cyber Security Course 5">
+                        <div class="caption">
+                            <h3>Threats and Vulnerabilities</h3>
+                            <p>In order to secure a system, you need to identify the threats and vulnerabilities in the
+                                system to protect it from the attackers.</p>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$60</h4>
+                            <br>
+                            <p><a href="threats and vulnurabilities.html" class="btn btn-primary" role="button"
+                                    style="margin-top:40px;float:inline-start; background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 30px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Threats and Vulnerabilities', '$60', 'vulnerability.png')">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course 6-->
+                <div class="col-md-4">
+                    <div class="thumbnail" style="height: 438px;">
+                        <img src="crypto.png" alt="Cyber Security Course 6">
+                        <div class="caption">
+                            <h3 style="margin-top: 13px;">Cryptography</h3>
+                            <p>This course will teach the basics of encryption techniques for sensitive information to
+                                prevent unauthorized access to users.</p>
+                            <h4 style="float: inline-start;">Price: </h4>
+                            <h4 style="float: inline-end;">$60</h4>
+                            <br>
+                            <p><a href="Cryptography.html" class="btn btn-primary" role="button"
+                                    style="margin-top: 40px;float:inline-start;background-color: #711DB0;">Learn More</a></p>
+                            <button class="btn btn-primary" role="button" style="margin-top: 30px; float:inline-end; background-color: #711DB0;"
+                                onclick="addToCart('Cryptography', '$50', 'crypto.png')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cartTab" id="shoppingCart" style="display: none;">
+        <h1 style="margin-top: 50px; margin-left: 60px;">Shopping Cart</h1>
+        <div class="listCart">
+
+        </div>
+        <div></div>
+        <div class="subtotal"
+            style="font-weight:700; font-size:medium; margin-left: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Subtotal: <span id="subtotalsection" style="margin-left: 220px;"></span>
+        </div>
+        <div class="tax"
+            style="font-weight:700; font-size:medium; margin-left: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Taxes: <span id="tax" style="margin-left: 240px;"></span>
+        </div>
+        <div class="totalPriceSection"
+            style="font-weight:700; font-size:x-large; margin-left: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            Total Price: <span id="totalPrice" style="margin-left: 130px;">$0.00</span>
+        </div>
+        <div class="btn">
+            <button class="c" onclick="toggleCart();">Close</button>
+            <a href="payment.html"><button class="checkOut" style="color: white;">Check Out</button></a>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <div style="clear: both;"></div> <!-- Clear the float -->
+    <br>
+    <footer style="background-color: #711DB0;">
+        <div class="container" style="width: 100%; height: 200px; margin-left: 80px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff; font-size: medium;">Home Uni</h5>
+                    <p
+                        style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; color: #ffffff; margin-right: 30px;">
+                        Our mission is to empower individuals, regardless of their location or schedule, to pursue their
+                        educational aspirations and achieve their goals.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff;font-size: medium;">Our World</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"></li>
+                        <a href="faq.html"
+                            style="margin-left: 50px;color: #01000d;letter-spacing: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; color: #ffffff;">Frequently
+                            Asked
+                            Questions</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="home.html"
+                                style="margin-left: 650px;color: #01000d;letter-spacing: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">Check
+                                Courses</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="after_signup_aboutus.html"
+                                style="margin-left: 650px; color: #01000d;letter-spacing: 2px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">About
+                                Us</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="after_signup_contact.html"
+                                style="margin-left: 650px;color: #01000d;letter-spacing: 2px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-1" style="letter-spacing: 2px; color: #ffffff; font-size: medium;">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #ffffff;">
+                                <i class="fas fa-map-marker-alt pe-2"></i>Juhu Lane, Mumbai
+                            </p>
+                        </li>
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #ffffff;">
+                                <i class="fas fa-phone pe-2"></i>+ 91 82691 12381
+                            </p>
+                        </li>
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #ffffff;">
+                                <i class="fas fa-envelope pe-2 mb-0"></i>homeuni@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©2023 Copyright:
+            <a class="text-dark" href="book.html">HomeUni.com</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        function toggleCart() {
+            var cart = document.getElementById("shoppingCart");
+            if (cart.style.display === "none") {
+                cart.style.display = "grid";
+            } else {
+                cart.style.display = "none";
+            }
+        }
+        function updateTotalPrice() {
+            var totalPrice = 0;
+            var items = document.querySelectorAll('.item');
+            items.forEach(function (item) {
+                var itemPrice = item.querySelector('.totalPrice').textContent;
+                totalPrice += parseFloat(itemPrice.replace('$', '')) * parseInt(item.querySelector('.quantity-value').textContent);
+            });
+            document.getElementById('subtotalsection').innerHTML = '$' + totalPrice.toFixed(2);
+            var taxRate = 0.10; // 10% tax rate
+            var tax = totalPrice * taxRate; // Calculate tax amount
+            var totalAmt = totalPrice + tax; // Add tax to the total price
+
+            document.getElementById('tax').innerHTML = '$' + tax.toFixed(2); // Update tax amount display
+            document.getElementById('totalPrice').textContent = '$' + totalAmt.toFixed(2); // Update total price display
+        }
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+</body>
+
+</html>

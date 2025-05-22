@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(to right, #8043af, rgb(192, 161, 215));
+}
+#aboutus
+{
+    height: 200px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #8043af;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: white
+}

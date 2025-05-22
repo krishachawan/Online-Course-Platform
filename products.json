@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name":" Incident Response and Management",
+        "price": 1099,
+        "image": "incident.png"
+    },
+    {
+        "id": 2,
+        "name":" Secure Software Development",
+        "price": 1099,
+        "image": "dev.png"
+    },
+    {
+        "id": 3,
+        "name":" Penetration Testing",
+        "price": 1199,
+        "image": "penetration.png"
+    },
+    {
+        "id": 4,
+        "name":" Basics of CyberSecurity",
+        "price": 999,
+        "image": "fundamental.png"
+    },
+    {
+        "id": 5,
+        "name":" Threats and Vulnerabilities",
+        "price": 1300,
+        "image": "vulnerability.png"
+    },
+    {
+        "id": 6,
+        "name":" Cryptography",
+        "price": 1399,
+        "image": "crypto.png"
+    }
+]

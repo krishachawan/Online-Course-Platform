@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HomeUni</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="home_styling.css">
+    <link rel="stylesheet" href="review_styling1.css">
+    <link rel="stylesheet" href="review_styling.css">
+    <style>
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(252, 249, 249); /* Set a background color */
+            color: black; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+          }
+          
+          #myBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+          }
+    </style>
+</head>
+
+<body style="background-image:linear-gradient(#711DB0, #fff);">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="color: #f8f9fa;">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <a href="startup.html">
+                    <img src="logo.png" style="width: 50px;">
+                </a>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="startup.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="up-arrow">&#9650;</span></button>
+    <div class = "container-fluid">
+        <div class="jumbotron" style="background-color: #711DB0; color: #ffffff; height: 600px; margin-top: 60px;">
+            <h1
+                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-top: 150px; padding-left: 30px;">
+                Grow skills right at home!</h1>
+            <p style=" float:inline-start; padding-left: 30px">Empower Your Mind, Enrich Your Future: Explore Limitless Learning with Our
+                Online Courses!</p>
+            <img src="skills.png" style="width: 220px; height: 240px;float: inline-end; margin-top: 0px;">
+            <br><br><br><br>
+            <a href="signup.php"><button
+                    style="height: 30px; width: 90px;margin-left: 30px; border-radius: 4px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #FFA732; color: #080808; border: none;">Start
+                    Now</button></a>
+        </div>
+    </div>
+    <div class="wrapper" style="margin-top: 0px; background-color: #c8a5e3;">
+		<div class="review-card">
+			<div class="header-content">
+				<div class="img-area">
+          <img alt="customer1" src="woman2.png">
+        </div>
+				<div class="info">
+					<h4>Marie Doe</h4>
+					<p>Maketing Manager</p>
+				</div>
+			</div>
+			<div class="single-review">
+				<p>"I am truly impressed with the diverse range of courses offered by this online platform. The
+                    instructors are knowledgeable, and the interactive learning materials make the subjects easy
+                    to understand. I've gained valuable skills that have already boosted my career. Highly
+                    recommend!"</p>
+			</div>
+			<div class="review-footer">
+				<div class="rating">
+					<span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="half-active">★</span>
+				</div>
+				<p>Reviewed on 15/01/2023</p>
+			</div>
+		</div>
+		<div class="review-card">
+			<div class="header-content">
+				<div class="img-area">
+          <img alt="customer1" src="woman1.png">
+        </div>
+				<div class="info">
+					<h4>Amy Woods</h4>
+					<p>Graphics Expert</p>
+				</div>
+			</div>
+			<div class="single-review">
+				<p>"I've tried a few online learning platforms, and this one stands out for its emphasis on
+                            real-world application. The projects and assessments challenged me to apply what I learned,
+                            ensuring a deeper understanding of the material. It's been a rewarding journey so far!"</p>
+			</div>
+			<div class="review-footer">
+				<div class="rating">
+					<span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="">★</span>
+				</div>
+				<p>Reviewed on 09/03/2023</p>
+			</div>
+		</div>
+		<div class="review-card">
+			<div class="header-content">
+				<div class="img-area">
+          <img alt="customer1" src="john.png">
+        </div>
+				<div class="info">
+					<h4>Jason Chedd</h4>
+					<p>Web Designer</p>
+				</div>
+			</div>
+			<div class="single-review">
+				<p>"As a working professional, the flexibility of this platform is a game-changer. I can learn
+                    at
+                    my own pace and schedule. The quality of the courses is top-notch, and the certificates add
+                    credibility to my resume. Thank you for making education accessible!"</p>
+			</div>
+			<div class="review-footer">
+				<div class="rating">
+					<span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span> 
+          <span class="active">★</span>
+				</div>
+				<p>Reviewed on 23/07/2023</p>
+			</div>
+		</div>
+	</div>
+    <div>
+        <div class="slide">
+            <div class="slideshow">
+              <ul>
+                <li>
+                  <div class="single-img">
+                    <img src="car1.jpeg" alt="" style="height: 450px;">
+                  </div>
+                </li>
+                <li>
+                  <div class="single-img">
+                    <img src="car2.jpg" alt="" style="height: 450px;">
+                  </div>
+                </li>
+                <li>
+                  <div class="single-img">
+                    <img src="car3.jpg" alt="" style="height: 450px;">
+                  </div>
+                </li>
+                <li>
+                  <div class="single-img">
+                    <img src="car5.jpg" alt="" style="height: 450px;">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </div>
+    <div style="clear: both;"></div> <!-- Clear the float -->
+
+    <footer style="background-color: #711DB0;">
+        <div class="container" style="width: 100%; height: 200px; margin-left: 80px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff; font-size: medium;">Home Uni</h5>
+                    <p
+                        style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; color: #ffffff; margin-right: 30px;">
+                        Our mission is to empower individuals, regardless of their location or schedule, to pursue their
+                        educational aspirations and achieve their goals.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-3" style="letter-spacing: 2px; color: #ffffff;font-size: medium;">Our World</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1"></li>
+                        <a href="faq.html"
+                            style="margin-left: 50px;color: #01000d;letter-spacing: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; color: #ffffff;">Frequently
+                            Asked
+                            Questions</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="book.html"
+                                style="margin-left: 650px;color: #01000d;letter-spacing: 2px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">Check
+                                Courses</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="signup.html"
+                                style="margin-left: 650px; color: #01000d;letter-spacing: 2px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">Sign
+                                Up</a>
+                        </li>
+                        <li class="mb-1" style="padding-top: 10px;">
+                            <a href="help.html"
+                                style="margin-left: 650px;color: #01000d;letter-spacing: 2px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin: 0; padding-top: 20px; color: #ffffff;">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <br>
+                    <h5 class="mb-1" style="letter-spacing: 2px; color: #ffffff; font-size: medium;">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #ffffff;">
+                                <i class="fas fa-map-marker-alt pe-2"></i>Juhu Lane, Mumbai
+                            </p>
+                        </li>
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #ffffff;">
+                                <i class="fas fa-phone pe-2"></i>+ 91 82691 12381
+                            </p>
+                        </li>
+                        <li>
+                            <p
+                                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #ffffff;">
+                                <i class="fas fa-envelope pe-2 mb-0"></i>homeuni@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©2023 Copyright:
+            <a class="text-dark" href="book.html">HomeUni.com</a>
+        </div>
+    </footer>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+
+</html>
